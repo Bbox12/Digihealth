@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <!-- Refresh -->
+
+    <item
+        android:id="@+id/action_refresh1"
+        android:icon="@drawable/ic_refresh"
+        android:orderInCategory="100"
+        android:title="Refresh"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_noti"
+        android:icon="@drawable/notify"
+        android:orderInCategory="100"
+        android:title="Notification"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/profile"
+        android:orderInCategory="100"
+        android:title="Profile"
+        app:showAsAction="ifRoom" />
+
+
+
+
+</menu>

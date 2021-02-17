@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "21464524544",
+    "firebase_url": "https://ecosense.firebaseio.com",
+    "project_id": "ecosense",
+    "storage_bucket": "ecosense.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21464524544:android:2c7178541e1460b0fbf5e5",
+        "android_client_info": {
+          "package_name": "com.admin.ecosense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21464524544-82ljl0jk793giv0ssuhln5me3r6sa9pr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.admin.ecosense",
+            "certificate_hash": "6584623ee4d832bac11820ce19f29e2f94e07a56"
+          }
+        },
+        {
+          "client_id": "21464524544-g94vjjantqie40gg7k4rhlm7l3eq2k8j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBakiaDFinDdeu7GGk0S4dU03dQ7_H9-gA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21464524544-g94vjjantqie40gg7k4rhlm7l3eq2k8j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/em"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/topics_back"
+    android:fitsSystemWindows="true">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_later_sos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/topics_back"
+        app:elevation="0dp"
+        app:expanded="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_later_sos"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/topics_back"
+            app:layout_scrollFlags="enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/textView101"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView102"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/textView101"
+                    android:layout_toRightOf="@+id/textView101"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar_main"
+        android:layout_gravity="top"
+        android:addStatesFromChildren="false"
+        android:alwaysDrawnWithCache="false"
+        android:background="@drawable/collapse_round_corner"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:layout_weight="0.45"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/_texttitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:background="@android:color/transparent"
+            android:drawableTop="@mipmap/ic_information"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_horizontal|center"
+            android:lines="2"
+            android:maxEms="8"
+            android:minEms="8"
+            android:padding="10dp"
+            android:text="Medical information (Repeat after every 48 Hrs)"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+
+        <LinearLayout
+            android:id="@+id/_L3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="@drawable/collapse_round_corner"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:boxBackgroundMode="outline">
+
+                <EditText
+                    android:id="@+id/ldh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="LDH"
+                    android:inputType="number|numberDecimal"
+                    android:minHeight="56dp"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Email Label -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:minHeight="56dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:boxBackgroundMode="outline">
+
+                <EditText
+                    android:id="@+id/crp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="CRP"
+                    android:inputType="number|numberDecimal"
+                    android:minHeight="56dp"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Email Label -->
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:minHeight="56dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:boxBackgroundMode="outline">
+
+                <EditText
+                    android:id="@+id/Ferritin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="true"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Ferritin"
+                    android:inputType="number|numberDecimal"
+                    android:minHeight="56dp"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="@drawable/collapse_round_corner"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="0.6"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    app:boxBackgroundMode="outline">
+
+                    <EditText
+                        android:id="@+id/Lymphocytes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Lymphocytes in %"
+                        android:inputType="number|numberDecimal"
+                        android:minHeight="56dp"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="0.4"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    app:boxBackgroundMode="outline">
+
+                    <EditText
+                        android:id="@+id/count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/roboto_medium"
+                        android:hint="Lymphocytes count"
+                        android:inputType="number|numberDecimal"
+                        android:minHeight="56dp"
+                        android:textSize="14sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:boxBackgroundMode="outline">
+
+                <EditText
+                    android:id="@+id/dimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="D Dimer"
+                    android:inputType="number|numberDecimal"
+                    android:minHeight="56dp"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:boxBackgroundMode="outline">
+
+                <EditText
+                    android:id="@+id/interleukin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Interleukin-6 "
+                    android:inputType="number|numberDecimal"
+                    android:minHeight="56dp"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:boxBackgroundMode="outline">
+
+                <EditText
+                    android:id="@+id/PCT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="PCT "
+                    android:inputType="number|numberDecimal"
+                    android:minHeight="56dp"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/_filename"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical|end"
+                android:text="Upload a file "
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:id="@+id/_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                android:ems="6"
+                android:fontFamily="@font/roboto_black"
+                android:text="Select"
+                android:textColor="@color/bg_screen3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_success"
+                android:text="Upload"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/button_failed"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

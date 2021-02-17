@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/em"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/topics_back"
+    android:fitsSystemWindows="true">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_later_sos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/topics_back"
+        app:elevation="0dp"
+        app:expanded="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_later_sos"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/topics_back"
+            app:layout_scrollFlags="enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/textView101"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView102"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/textView101"
+                    android:layout_toRightOf="@+id/textView101"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar_main"
+        android:layout_gravity="top"
+        android:addStatesFromChildren="false"
+        android:alwaysDrawnWithCache="false"
+        android:background="@drawable/collapse_round_corner"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/app_later_sos"
+            android:layout_gravity="top"
+            android:layout_weight="0.45"
+            android:background="@drawable/collapse_round_corner"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:layout_gravity="left"
+                android:layout_marginBottom="5dp"
+                android:background="?attr/editTextBackground"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="left|center"
+                android:text="Profile Details"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:boxBackgroundMode="outline">
+
+                <EditText
+                    android:id="@+id/PatientID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Patient ID"
+                    android:inputType="textCapWords|textNoSuggestions"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Email Label -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:boxBackgroundMode="outline">
+
+                <EditText
+                    android:id="@+id/input_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Name"
+                    android:inputType="textCapWords|textNoSuggestions"
+                    android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Email Label -->
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:boxBackgroundMode="outline">
+
+                <EditText
+                    android:id="@+id/input_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="true"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Gender"
+                    android:inputType="text|textNoSuggestions"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:boxBackgroundMode="outline">
+
+                <EditText
+                    android:id="@+id/input_bday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/roboto_medium"
+                    android:hint="Birthday"
+                    android:inputType="date"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/_t1"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="10dp"
+                android:background="?attr/editTextBackground"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical|start"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:text="Request status"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/editbox_background"
+                android:cursorVisible="true"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="start|top"
+                android:hint="Title"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:lines="2"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/editbox_background"
+                android:cursorVisible="true"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="start|top"
+                android:hint="Details"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:lines="5"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="gone" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sosrv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/_L1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/app_later_sos"
+                android:layout_gravity="top"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.45"
+                android:background="@drawable/editt_bottom"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/_filename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Covid status"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/covidstatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_failed"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center|center_vertical"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="PENDING"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <ProgressBar
+        android:id="@+id/progressBaremergency"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:theme="?android:attr/progressBarStyleSmall"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

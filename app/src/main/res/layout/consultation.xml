@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/topics_back"
+    android:fitsSystemWindows="true"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/topics_back"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@android:color/transparent"
+            app:layout_scrollFlags="enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <com.admin.ecosense.helper.MyViewPager
+            android:id="@+id/viewPagerConsult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/collapse_round_corner">
+
+            <ScrollView
+                android:id="@+id/first_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="56dp"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_vertical"
+                            android:inputType="date"
+                            android:paddingLeft="20dp"
+                            android:text="Enter your age"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+
+                        <AutoCompleteTextView
+                            android:id="@+id/age"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="?attr/editTextBackground"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:hint="Please select"
+                            android:inputType="date"
+                            android:minEms="6"
+                            android:paddingRight="20dp"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="0.5"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="textMultiLine"
+                        android:padding="20dp"
+                        android:text="Please provide any known COVID-19 risk factors"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/risk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/transparent"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </ScrollView>
+            <ScrollView
+                android:id="@+id/second_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/app_bar_main"
+                android:layout_gravity="top"
+                android:addStatesFromChildren="false"
+                android:alwaysDrawnWithCache="false"
+                android:background="@drawable/collapse_round_corner"
+                android:fillViewport="true"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:paddingRight="10dp"
+                android:scrollbars="none"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:background="@drawable/collapse_round_corner"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/_c1"
+                        cardCornerRadius="50dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="8dp"
+                        android:padding="2dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="50dp"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="true"
+                        app:cardUseCompatPadding="false" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:background="@android:drawable/screen_background_light"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="false"
+                            android:layout_gravity="left"
+                            android:layout_marginBottom="5dp"
+                            android:background="?attr/editTextBackground"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="left"
+                            android:text="Account Details"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+                            <EditText
+                                android:id="@+id/input_user_mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@mipmap/ic_call"
+                                android:drawableLeft="@mipmap/ic_call"
+                                android:focusableInTouchMode="true"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Mobile no"
+                                android:inputType="number"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+                            <EditText
+                                android:id="@+id/input_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@mipmap/ic_email1"
+                                android:drawableLeft="@mipmap/ic_email1"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Email"
+                                android:inputType="textNoSuggestions|textEmailAddress"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+                            <EditText
+                                android:id="@+id/input_passport"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@mipmap/ic_email1"
+                                android:drawableLeft="@mipmap/ic_email1"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Passport No/Any ID no"
+                                android:inputType="textNoSuggestions|textEmailAddress"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_weight="0.45"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="false"
+                            android:layout_gravity="left"
+                            android:layout_marginBottom="5dp"
+                            android:background="?attr/editTextBackground"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="left|center"
+                            android:text="Profile Details"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            app:boxBackgroundMode="outline">
+
+                            <EditText
+                                android:id="@+id/PatientID"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Patient ID"
+                                android:inputType="textCapWords|textNoSuggestions"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <!-- Email Label -->
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            app:boxBackgroundMode="outline">
+
+                            <EditText
+                                android:id="@+id/input_user_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Name"
+                                android:inputType="textCapWords|textNoSuggestions"
+                                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <!-- Email Label -->
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            app:boxBackgroundMode="outline">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/input_gender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:cursorVisible="true"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Gender"
+                                android:inputType="text|textNoSuggestions"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            app:boxBackgroundMode="outline">
+
+                            <EditText
+                                android:id="@+id/input_bday"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Birthday"
+                                android:inputType="date"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            app:boxBackgroundMode="outline">
+
+                            <EditText
+                                android:id="@+id/inputemergencyname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Emergency contact name"
+                                android:inputType="date"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:theme="@style/ThemeOverlay.AppCompat.Light"
+                            app:boxBackgroundMode="outline">
+
+                            <EditText
+                                android:id="@+id/inputemergencyno"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusableInTouchMode="false"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Emergency contact no"
+                                android:inputType="date"
+                                android:textSize="14sp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edit_text_background"
+                        android:text="Submit"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </ScrollView>
+            <ScrollView
+                android:id="@+id/third_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="2dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@android:color/transparent"
+                        android:minHeight="0dp"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <TextView
+                            android:id="@+id/_q2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:inputType="textMultiLine"
+                            android:text="Please select a payment option"
+                            android:lineSpacingExtra="8sp"
+                            android:minHeight="56dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:inputType="textMultiLine"
+                            android:lineSpacingExtra="8sp"
+                            android:minHeight="56dp"
+                            android:text="Amount Due"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                           android:id="@+id/_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="start"
+                            android:inputType="textMultiLine"
+                            android:text="R599"
+                            android:lineSpacingExtra="8sp"
+                            android:minHeight="56dp"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/_cashpay"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Pay now with credit card"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/_aid"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Instant EFT"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+            <ScrollView
+                android:id="@+id/fourth_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/roboto_black"
+                        android:gravity="start|top|center_vertical"
+                        android:minEms="4"
+                        android:padding="5dp"
+                        android:text="Set up your credit or debit card."
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_gravity="start"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/roboto_black"
+                        android:gravity="center_horizontal|top|center_vertical"
+                        android:minEms="4"
+                        android:padding="5dp"
+                        android:src="@drawable/debitcards" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@android:color/transparent"
+                        android:minHeight="56dp"
+                        android:textColorHint="@color/gray"
+                        android:visibility="visible"
+                        app:boxBackgroundMode="outline"
+                        app:boxStrokeColor="@color/red"
+                        app:errorEnabled="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/roboto"
+                            android:hint="First Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textNoSuggestions"
+                            android:lines="2"
+                            android:shadowColor="@color/white"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/black"
+                            android:textColorLink="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@android:color/transparent"
+                        android:minHeight="56dp"
+                        android:textColorHint="@color/black"
+                        android:visibility="visible"
+                        app:boxBackgroundMode="outline"
+                        app:boxStrokeColor="@color/red"
+                        app:errorEnabled="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Last Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textNoSuggestions"
+                            android:lines="2"
+                            android:shadowColor="@color/white"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/gray"
+                            android:textColorLink="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@android:color/transparent"
+                        android:minHeight="56dp"
+                        android:textColorHint="@color/black"
+                        android:visibility="visible"
+                        app:boxBackgroundMode="outline"
+                        app:boxStrokeColor="@color/red"
+                        app:errorEnabled="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Card Number"
+                            android:imeOptions="actionNext"
+                            android:inputType="textNoSuggestions"
+                            android:lines="2"
+                            android:shadowColor="@color/white"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/gray"
+                            android:textColorLink="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@android:color/transparent"
+                        android:minHeight="56dp"
+                        android:textColorHint="@color/black"
+                        android:visibility="visible"
+                        app:boxBackgroundMode="outline"
+                        app:boxStrokeColor="@color/red"
+                        app:errorEnabled="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Expiry Date (MM/YY)"
+                            android:imeOptions="actionNext"
+                            android:inputType="textNoSuggestions"
+                            android:lines="2"
+                            android:shadowColor="@color/white"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/gray"
+                            android:textColorLink="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@android:color/transparent"
+                        android:minHeight="56dp"
+                        android:textColorHint="@color/black"
+                        android:visibility="visible"
+                        app:boxBackgroundMode="outline"
+                        app:boxStrokeColor="@color/red"
+                        app:errorEnabled="false">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Security Code"
+                            android:imeOptions="actionNext"
+                            android:inputType="textNoSuggestions"
+                            android:lines="2"
+                            android:shadowColor="@color/white"
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/gray"
+                            android:textColorLink="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/common_google_signin_btn_text_light_normal_background"
+                        android:minHeight="56dp"
+                        android:textColorHint="@color/black"
+                        android:visibility="visible"
+                        app:boxBackgroundMode="outline"
+                        app:boxStrokeColor="@color/red"
+                        app:errorEnabled="false">
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/cash"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/roboto"
+                            android:hint="Pay by Cash"
+                            android:imeOptions="actionNext"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:shadowColor="@color/white"
+                            android:text="Cash on location is available. Card acceptance subject device availability."
+                            android:textColor="@color/black"
+                            android:textColorHighlight="@color/white"
+                            android:textColorHint="@color/gray"
+                            android:textColorLink="@color/white" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I am over 18, and I agree to the Terms of Use and Privacy Statement." />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/finalsubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/button_success"
+                        android:ems="12"
+                        android:text="Submit"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </ScrollView>
+            <ScrollView
+                android:id="@+id/fifth_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="textMultiLine"
+                        android:padding="20dp"
+                        android:text="When would you like to have DigiDoc contact you for your virtual consult"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <CalendarView
+                        android:id="@+id/calendarView"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:inputType="textMultiLine"
+                        android:text="Please select a timeslot"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/timerv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/transparent"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/_donotcall"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Don’t want a call? Tell us what is wrong instead"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/lastsubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/button_success"
+                        android:ems="12"
+                        android:text="Submit"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </ScrollView>
+            <ScrollView
+                android:id="@+id/sixth_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="textMultiLine"
+                        android:padding="10dp"
+                        android:text="Thank you!"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="textMultiLine"
+                        android:padding="10dp"
+                        android:text="Our DigiDoc will reach out to you on :"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/reach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="textMultiLine"
+                        android:padding="10dp"
+                        android:text="Our DigiDoc will reach out to you on :"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/roboto"
+                        android:inputType="textMultiLine"
+                        android:text="Details of selection"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/waqf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="textMultiLine"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/yourage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="textMultiLine"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/question"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="textMultiLine"
+                        android:padding="20dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/riskfactor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="textMultiLine"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/paymentmde"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:inputType="textMultiLine"
+                        android:padding="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/sixsubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/button_success"
+                        android:ems="12"
+                        android:text="OK"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </ScrollView>
+
+        </com.admin.ecosense.helper.MyViewPager>
+
+    <ProgressBar
+        android:id="@+id/progressBaremergency"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:theme="?android:attr/progressBarStyleSmall"
+        android:visibility="visible" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

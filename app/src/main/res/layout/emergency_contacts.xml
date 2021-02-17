@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/em"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/topics_back"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_later_sos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/topics_back"
+            app:elevation="0dp"
+            app:expanded="true">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_later_sos"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/topics_back"
+                app:layout_scrollFlags="enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:gravity="center">
+
+
+                    <TextView
+                        android:id="@+id/textView101"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView102"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/textView101"
+                        android:layout_toRightOf="@+id/textView101"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/roboto_medium"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_later_sos"
+            android:background="@drawable/collapse_round_corner"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:paddingRight="10dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sosrv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/_t1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/common_google_signin_btn_text_light_normal_background"
+                android:ems="12"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_horizontal"
+                android:hint="No information found"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBaremergency"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:theme="?android:attr/progressBarStyleSmall"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="10dp"
+        android:src="@android:drawable/ic_menu_upload"
+        android:visibility="gone"
+        app:backgroundTint="@color/colorAccent"
+        app:backgroundTintMode="screen"
+        app:elevation="12dp"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="@color/design_default_color_secondary" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabhistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="10dp"
+        android:src="@mipmap/ic_time"
+        android:visibility="gone"
+        app:backgroundTint="@color/design_default_color_secondary_variant"
+        app:backgroundTintMode="screen"
+        app:elevation="12dp"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="@color/red"
+        />
+
+    <Button
+        android:id="@+id/messagetodoctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_success"
+        android:ems="12"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Message to doctor"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:visibility="gone" />
+
+
+    <include
+        layout="@layout/dialogsession"
+        android:visibility="gone" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

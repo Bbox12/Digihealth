@@ -1,0 +1,1110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/tools"
+    android:id="@+id/cor_home_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:visibility="visible"
+            app:elevation="0dp">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbardd"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                app:layout_scrollFlags="enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:title="DigiHealth"
+                app:titleTextAppearance="@style/WindowTitleStyle"
+                app:titleTextColor="@color/white" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar_main"
+            android:layout_gravity="top"
+            android:addStatesFromChildren="false"
+            android:alwaysDrawnWithCache="false"
+            android:background="@color/gray"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/more4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical|center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutBottom6"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@android:color/transparent" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="0.8"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:id="@+id/mystatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                            android:padding="10dp">
+
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:drawableTop="@mipmap/ic_details"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_horizontal|center"
+                                android:lines="2"
+                                android:maxEms="8"
+                                android:maxLines="2"
+                                android:minEms="8"
+                                android:padding="10dp"
+                                android:text="My Details"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/submitarequest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                            android:padding="10dp">
+
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.6"
+                                android:background="@android:color/transparent"
+                                android:drawableTop="@mipmap/ic_patients"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_horizontal|center"
+                                android:lines="2"
+                                android:maxEms="8"
+                                android:minEms="8"
+                                android:padding="10dp"
+                                android:text="My Patients"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/more3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical|center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutBottom5"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@android:color/transparent" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="0.8"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:id="@+id/_n1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/common_google_signin_btn_icon_light_normal_background">
+
+
+                            <TextView
+                                android:id="@+id/name_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:drawableTop="@mipmap/ic_waiting"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_horizontal|center"
+                                android:lines="2"
+                                android:maxEms="8"
+                                android:maxLines="2"
+                                android:minEms="8"
+                                android:padding="10dp"
+                                android:text="Waiting room"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/_n2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                            android:padding="10dp">
+
+
+                            <TextView
+                                android:id="@+id/name_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:background="@android:color/transparent"
+                                android:drawableTop="@mipmap/ic_information"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="center_horizontal|center"
+                                android:lines="2"
+                                android:maxEms="8"
+                                android:minEms="8"
+                                android:padding="10dp"
+                                android:text="General Info"
+                                android:textColor="@android:color/black"
+                                android:textSize="12sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/name_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@android:color/white"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="right|center_vertical"
+                    android:lines="2"
+                    android:maxEms="8"
+                    android:maxLines="2"
+                    android:minEms="8"
+                    android:paddingRight="10dp"
+                    android:text="@string/how_it_w_orks"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/familymebers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                    android:gravity="center_vertical"
+                    android:minWidth="128dp"
+                    android:minHeight="128dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+
+                        android:id="@+id/_nos"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal|top"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white"
+                        android:padding="5dp">
+
+                        <WebView
+                            android:id="@+id/webView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal" />
+                    </LinearLayout>
+
+                    <Button
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_weight="0.5"
+                        android:background="@android:color/transparent"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:padding="5dp"
+                        android:text="Consultation"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical|center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintHeight_min="wrap"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_min="wrap">
+
+                    <RelativeLayout
+                        android:id="@+id/layoutTB"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/transparent"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutBottomTB"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@color/gray"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/smtext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="30dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_vertical|start"
+                            android:lines="2"
+                            android:padding="5dp"
+                            android:paddingLeft="10dp"
+                            android:text="The following are core symptoms identified of COVID-19 which may appear 2-14 days after exposure.\n If you are experiencing these please consult with your health professional for further guidance"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="2dp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_medium"
+                            android:gravity="center_vertical|start"
+                            android:lines="2"
+                            android:padding="5dp"
+                            android:paddingLeft="2dp"
+                            android:text="Note - if you are experiencing these please consult with your health professional for further guidance"
+                            android:textColor="@color/black"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/onlyservice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="130dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="1dp"
+                        android:background="@android:color/transparent"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:background="?attr/editTextBackground"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical|start"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Patient registered"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/_n5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="0.25"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardElevation="0dp"
+                            app:contentPadding="0.5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                                android:clickable="false"
+                                android:focusable="true"
+                                android:gravity="center_vertical|center"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+
+                                <TextView
+                                    android:id="@+id/nigtingle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center_horizontal|top"
+                                    android:inputType="textMultiLine|textNoSuggestions"
+                                    android:lines="1"
+                                    android:minEms="8"
+                                    android:padding="5dp"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_horizontal|center"
+                                    android:lines="2"
+                                    android:maxEms="8"
+                                    android:maxLines="2"
+                                    android:minEms="8"
+                                    android:padding="5dp"
+                                    android:text="Nightiangle patient"
+                                    android:textAllCaps="true"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/n8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="0.25"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="false"
+                            app:contentPadding="0.5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                                android:gravity="center_vertical|center"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:id="@+id/refered"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center_horizontal|top"
+                                    android:inputType="textMultiLine|textNoSuggestions"
+                                    android:lines="1"
+                                    android:minEms="8"
+                                    android:padding="5dp"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_horizontal|center"
+                                    android:lines="2"
+                                    android:maxEms="8"
+                                    android:maxLines="2"
+                                    android:minEms="8"
+                                    android:padding="5dp"
+                                    android:text="Refered patient"
+                                    android:textAllCaps="true"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/questions"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="0.25"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="false"
+                            app:contentPadding="0.5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                                android:clickable="false"
+                                android:focusable="true"
+                                android:gravity="center_vertical|center"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+
+                                <TextView
+                                    android:id="@+id/existing"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center_horizontal|top"
+                                    android:inputType="textMultiLine|textNoSuggestions"
+                                    android:lines="1"
+                                    android:minEms="8"
+                                    android:padding="5dp"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_horizontal|center"
+                                    android:lines="2"
+                                    android:maxEms="8"
+                                    android:maxLines="2"
+                                    android:minEms="8"
+                                    android:padding="5dp"
+                                    android:text="Ekuphileni patient"
+                                    android:textAllCaps="true"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/videos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="0.25"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="false"
+                            app:contentPadding="0.5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                                android:gravity="center_vertical|center"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:id="@+id/newpatient"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/roboto_black"
+                                    android:gravity="center_horizontal|top"
+                                    android:inputType="textMultiLine|textNoSuggestions"
+                                    android:lines="1"
+                                    android:minEms="8"
+                                    android:padding="5dp"
+                                    android:textColor="@color/red"
+                                    android:textSize="12sp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_horizontal|center"
+                                    android:lines="2"
+                                    android:maxEms="8"
+                                    android:maxLines="2"
+                                    android:minEms="8"
+                                    android:padding="5dp"
+                                    android:text="New \npatient"
+                                    android:textAllCaps="true"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="?attr/editTextBackground"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical|start"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Monitor"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/h2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:minWidth="128dp"
+                    android:minHeight="128dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/_hotspots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                        android:focusable="true"
+                        android:gravity="start|center_vertical"
+                        android:orientation="vertical"
+                        android:padding="0dp">
+
+                        <TextView
+                            android:id="@+id/registered"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_black"
+                            android:gravity="center_horizontal|top"
+                            android:inputType="textMultiLine|textNoSuggestions"
+                            android:lines="1"
+                            android:minEms="8"
+                            android:padding="5dp"
+                            android:text="HOTSPOTS"
+                            android:textColor="@color/red"
+                            android:textSize="12sp" />
+
+
+                        <TextView
+                            android:id="@+id/noofpatient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:background="@android:color/transparent"
+                            android:ems="8"
+                            android:fontFamily="@font/roboto_black"
+                            android:gravity="center_horizontal|top"
+                            android:textColor="@color/red"
+                            android:textSize="48dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.8"
+                            android:background="@android:color/transparent"
+                            android:ems="8"
+                            android:fontFamily="@font/roboto_mono_medium"
+                            android:gravity="center_horizontal|top"
+                            android:inputType="textMultiLine"
+                            android:text="COVID-19 patient on the spot"
+                            android:textColor="@color/black"
+                            android:textSize="10sp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/name_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                        android:drawableTop="@mipmap/crowd"
+                        android:fontFamily="@font/roboto_black"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:lines="2"
+                        android:maxEms="8"
+                        android:maxLines="2"
+                        android:minEms="8"
+                        android:paddingRight="5dp"
+                        android:text="Crowd"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/askwho"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/straingbackground"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="ASK WORLD HEALTH ORGANISATION"
+                    android:textColor="@android:color/transparent"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="10dp"
+                    android:background="?attr/editTextBackground"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical|start"
+                    android:padding="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Around the world"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/totalpatient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="0.5"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardElevation="0dp"
+                            app:contentPadding="0.5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                                android:clickable="false"
+                                android:focusable="true"
+                                android:gravity="center_vertical|center"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    cardCornerRadius="36dp"
+                                    android:layout_width="72dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"
+                                    android:padding="2dp"
+                                    app:cardBackgroundColor="@android:color/transparent"
+                                    app:cardCornerRadius="36dp">
+
+                                    <ImageView
+
+                                        android:layout_width="72dp"
+                                        android:layout_height="72dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@mipmap/ic_statistics" />
+                                </androidx.cardview.widget.CardView>
+
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_horizontal|center"
+                                    android:lines="2"
+                                    android:maxEms="8"
+                                    android:maxLines="2"
+                                    android:minEms="8"
+                                    android:padding="10dp"
+                                    android:text="Statistics"
+                                    android:textAllCaps="true"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/govtsite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="0.5"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="false"
+                            app:contentPadding="0.5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                                android:gravity="center_vertical|center"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <androidx.cardview.widget.CardView
+                                    cardCornerRadius="36dp"
+                                    android:layout_width="72dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"
+                                    android:padding="2dp"
+                                    app:cardBackgroundColor="@android:color/transparent"
+                                    app:cardCornerRadius="36dp"
+                                    app:cardElevation="0dp"
+                                    app:contentPadding="0.5dp">
+
+                                    <ImageView
+                                        android:layout_width="72dp"
+                                        android:layout_height="72dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@mipmap/ic_govt" />
+                                </androidx.cardview.widget.CardView>
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_horizontal|center"
+                                    android:lines="2"
+                                    android:maxEms="8"
+                                    android:maxLines="2"
+                                    android:minEms="8"
+                                    android:padding="10dp"
+                                    android:text="VISIT GOVT SITE"
+                                    android:textAllCaps="true"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/_news"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_weight="0.5"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardElevation="0dp"
+                            app:contentPadding="0.5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                                android:clickable="false"
+                                android:focusable="true"
+                                android:gravity="center_vertical|center"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+
+                                <androidx.cardview.widget.CardView
+                                    cardCornerRadius="36dp"
+                                    android:layout_width="72dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"
+                                    android:padding="2dp"
+                                    app:cardBackgroundColor="@android:color/transparent"
+                                    app:cardCornerRadius="36dp">
+
+                                    <ImageView
+
+                                        android:layout_width="72dp"
+                                        android:layout_height="72dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@mipmap/ic_news" />
+                                </androidx.cardview.widget.CardView>
+
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_horizontal|center"
+                                    android:lines="2"
+                                    android:maxEms="8"
+                                    android:maxLines="2"
+                                    android:minEms="8"
+                                    android:padding="10dp"
+                                    android:text="NEWS"
+                                    android:textAllCaps="true"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/test"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            app:cardBackgroundColor="@android:color/transparent"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="false"
+                            app:contentPadding="0.5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+                                android:gravity="center_vertical|center"
+                                android:orientation="vertical"
+                                android:padding="10dp">
+
+                                <androidx.cardview.widget.CardView
+                                    cardCornerRadius="36dp"
+                                    android:layout_width="72dp"
+                                    android:layout_height="72dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="10dp"
+                                    android:padding="2dp"
+                                    app:cardBackgroundColor="@android:color/transparent"
+                                    app:cardCornerRadius="36dp"
+                                    app:cardElevation="0dp"
+                                    app:contentPadding="0.5dp">
+
+                                    <ImageView
+                                        android:layout_width="72dp"
+                                        android:layout_height="72dp"
+                                        android:scaleType="fitXY"
+                                        android:src="@mipmap/ic_test" />
+                                </androidx.cardview.widget.CardView>
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:gravity="center_horizontal|center"
+                                    android:lines="2"
+                                    android:maxEms="8"
+                                    android:maxLines="2"
+                                    android:minEms="8"
+                                    android:padding="10dp"
+                                    android:text="Request for test"
+                                    android:textAllCaps="true"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar_main"
+            android:layout_gravity="top"
+            android:addStatesFromChildren="false"
+            android:alwaysDrawnWithCache="false"
+            android:background="@drawable/collapse_round_corner"
+            android:fillViewport="true"
+            android:paddingLeft="8dp"
+            android:paddingTop="20dp"
+            android:paddingRight="8dp"
+            android:scrollbars="none"
+            android:visibility="gone"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                shimmer:duration="1200">
+
+                <!-- Adding 3 rows of placeholders -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical">
+
+
+                    <include layout="@layout/_placeholder_item_main" />
+
+
+                    <include layout="@layout/_placeholder_item_main" />
+
+                    <include layout="@layout/_placeholder_item_main" />
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/bottomsheet_request"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

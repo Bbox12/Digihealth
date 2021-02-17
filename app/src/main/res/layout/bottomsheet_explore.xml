@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet_explore"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/topics_back"
+    android:orientation="vertical"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <LinearLayout
+        android:id="@+id/lhome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@android:drawable/presence_online"
+            android:padding="5dp"
+            android:text="Drag the marker to your home location and press ok!"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"
+            android:animateLayoutChanges="true"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/yeshome"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_bold"
+                android:text="OK"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:theme="@style/MyCheckbox" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/nohome"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:ems="8"
+                android:fontFamily="@font/roboto_bold"
+                android:text="NO"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:theme="@style/MyCheckbox"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lprogress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/familymebers"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/straingbackground"
+            android:ems="10"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:text="Cancel alert"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+</LinearLayout>

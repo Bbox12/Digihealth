@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:mContext="info.androidhive.gmail.activity.MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@android:color/transparent"
+                app:layout_scrollFlags="enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark"
+                app:title="Questionnaire" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/collapse_round_corner">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/logout"
+                android:layout_below="@+id/app_profile"
+                android:background="@android:color/transparent"
+                android:fillViewport="true"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/m0"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="0.5"
+                            android:background="@android:color/transparent"
+                            android:minHeight="56dp"
+                            android:textColorHint="@color/red"
+                            android:visibility="visible"
+                            app:boxBackgroundMode="outline"
+                            app:boxStrokeColor="@color/red"
+                            app:errorEnabled="false">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/country"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Country"
+                                android:imeOptions="actionNext"
+                                android:inputType="textNoSuggestions"
+                                android:lines="2"
+                                android:shadowColor="@color/white"
+                                android:textColor="@color/black"
+                                android:textColorHighlight="@color/white"
+                                android:textColorHint="@color/top"
+                                android:textColorLink="@color/white" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="10dp"
+                            android:layout_weight="0.5"
+                            android:background="@android:color/transparent"
+                            android:minHeight="56dp"
+                            android:textColorHint="@color/red"
+                            android:visibility="visible"
+                            app:boxBackgroundMode="outline"
+                            app:boxStrokeColor="@color/red"
+                            app:errorEnabled="false">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/region"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ems="10"
+                                android:fontFamily="@font/roboto_medium"
+                                android:hint="Region"
+                                android:imeOptions="actionNext"
+                                android:inputType="textNoSuggestions"
+                                android:lines="2"
+                                android:shadowColor="@color/white"
+                                android:textColor="@color/black"
+                                android:textColorHighlight="@color/white"
+                                android:textColorHint="@color/top"
+                                android:textColorLink="@color/white" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/_flightyes"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Flight taken"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/_L1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="0.5"
+                                android:background="@android:color/transparent"
+                                android:minHeight="56dp"
+                                android:textColorHint="@color/red"
+                                android:visibility="visible"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/red"
+                                app:errorEnabled="false">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/flightdetails"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:hint="Flight details"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textNoSuggestions"
+                                    android:lines="2"
+                                    android:shadowColor="@color/white"
+                                    android:textColor="@color/black"
+                                    android:textColorHighlight="@color/white"
+                                    android:textColorHint="@color/top"
+                                    android:textColorLink="@color/white" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="0.33"
+                                    android:background="@android:color/transparent"
+                                    android:minHeight="56dp"
+                                    android:textColorHint="@color/red"
+                                    android:visibility="visible"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/red"
+                                    app:errorEnabled="false">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/seat"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:hint="Seat"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textNoSuggestions"
+                                        android:lines="2"
+                                        android:shadowColor="@color/white"
+                                        android:textColor="@color/black"
+                                        android:textColorHighlight="@color/white"
+                                        android:textColorHint="@color/top"
+                                        android:textColorLink="@color/white" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="0.33"
+                                    android:background="@android:color/transparent"
+                                    android:minHeight="56dp"
+                                    android:textColorHint="@color/red"
+                                    android:visibility="visible"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/red"
+                                    app:errorEnabled="false">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/arrivaldate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:hint="Arrival date"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textNoSuggestions"
+                                        android:lines="2"
+                                        android:shadowColor="@color/white"
+                                        android:textColor="@color/black"
+                                        android:textColorHighlight="@color/white"
+                                        android:textColorHint="@color/top"
+                                        android:textColorLink="@color/white" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="0.33"
+                                    android:background="@android:color/transparent"
+                                    android:minHeight="56dp"
+                                    android:textColorHint="@color/red"
+                                    android:visibility="visible"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/red"
+                                    app:errorEnabled="false">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/departuredate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:hint="Departure date"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textNoSuggestions"
+                                        android:lines="2"
+                                        android:shadowColor="@color/white"
+                                        android:textColor="@color/black"
+                                        android:textColorHighlight="@color/white"
+                                        android:textColorHint="@color/top"
+                                        android:textColorLink="@color/white" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="0.5"
+                                android:background="@android:color/transparent"
+                                android:minHeight="56dp"
+                                android:textColorHint="@color/red"
+                                android:visibility="visible"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/red"
+                                app:errorEnabled="false">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/accomodation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:hint="Accomodation"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textNoSuggestions"
+                                    android:lines="2"
+                                    android:shadowColor="@color/white"
+                                    android:textColor="@color/black"
+                                    android:textColorHighlight="@color/white"
+                                    android:textColorHint="@color/top"
+                                    android:textColorLink="@color/white" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="0.5"
+                                android:background="@android:color/transparent"
+                                android:minHeight="56dp"
+                                android:textColorHint="@color/red"
+                                android:visibility="visible"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/red"
+                                app:errorEnabled="false">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/otherdetails"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:hint="Other Details"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textNoSuggestions"
+                                    android:lines="2"
+                                    android:shadowColor="@color/white"
+                                    android:textColor="@color/black"
+                                    android:textColorHighlight="@color/white"
+                                    android:textColorHint="@color/top"
+                                    android:textColorLink="@color/white" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/othertravel"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:fontFamily="@font/roboto_medium"
+                            android:text="Other Travel Information"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/_L2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="0.5"
+                                    android:background="@android:color/transparent"
+                                    android:minHeight="56dp"
+                                    android:textColorHint="@color/red"
+                                    android:visibility="visible"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/red"
+                                    app:errorEnabled="false">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/carrier"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:hint="Carrier"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textNoSuggestions"
+                                        android:lines="2"
+                                        android:shadowColor="@color/white"
+                                        android:textColor="@color/black"
+                                        android:textColorHighlight="@color/white"
+                                        android:textColorHint="@color/top"
+                                        android:textColorLink="@color/white" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="0.5"
+                                    android:background="@android:color/transparent"
+                                    android:minHeight="56dp"
+                                    android:textColorHint="@color/red"
+                                    android:visibility="visible"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/red"
+                                    app:errorEnabled="false">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/seat2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:hint="Seat"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textNoSuggestions"
+                                        android:lines="2"
+                                        android:shadowColor="@color/white"
+                                        android:textColor="@color/black"
+                                        android:textColorHighlight="@color/white"
+                                        android:textColorHint="@color/top"
+                                        android:textColorLink="@color/white" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="0.5"
+                                    android:background="@android:color/transparent"
+                                    android:minHeight="56dp"
+                                    android:textColorHint="@color/red"
+                                    android:visibility="visible"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/red"
+                                    app:errorEnabled="false">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/departedfrom"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:hint="Departed From"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textNoSuggestions"
+                                        android:lines="2"
+                                        android:shadowColor="@color/white"
+                                        android:textColor="@color/black"
+                                        android:textColorHighlight="@color/white"
+                                        android:textColorHint="@color/top"
+                                        android:textColorLink="@color/white" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_weight="0.5"
+                                    android:background="@android:color/transparent"
+                                    android:minHeight="56dp"
+                                    android:textColorHint="@color/red"
+                                    android:visibility="visible"
+                                    app:boxBackgroundMode="outline"
+                                    app:boxStrokeColor="@color/red"
+                                    app:errorEnabled="false">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/arrivein"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ems="10"
+                                        android:fontFamily="@font/roboto_medium"
+                                        android:hint="Arrive In"
+                                        android:imeOptions="actionNext"
+                                        android:inputType="textNoSuggestions"
+                                        android:lines="2"
+                                        android:shadowColor="@color/white"
+                                        android:textColor="@color/black"
+                                        android:textColorHighlight="@color/white"
+                                        android:textColorHint="@color/top"
+                                        android:textColorLink="@color/white" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+                            </LinearLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="10dp"
+                                android:layout_weight="0.5"
+                                android:background="@android:color/transparent"
+                                android:minHeight="56dp"
+                                android:textColorHint="@color/red"
+                                android:visibility="visible"
+                                app:boxBackgroundMode="outline"
+                                app:boxStrokeColor="@color/red"
+                                app:errorEnabled="false">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/otherdetails2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="10"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:hint="Other Details"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textNoSuggestions"
+                                    android:lines="2"
+                                    android:shadowColor="@color/white"
+                                    android:textColor="@color/black"
+                                    android:textColorHighlight="@color/white"
+                                    android:textColorHint="@color/top"
+                                    android:textColorLink="@color/white" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/edit_text_background"
+                        android:fontFamily="@font/roboto_medium"
+                        android:minWidth="200dp"
+                        android:padding="10dp"
+                        android:text="SUBMIT"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </ScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

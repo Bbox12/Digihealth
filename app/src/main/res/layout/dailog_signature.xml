@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff"
+    >
+
+
+    <TextView
+        android:id="@+id/text_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/a"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_horizontal"
+        android:text="Please sign here"
+        android:textColor="@color/attend"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_horizontal"
+        android:text=" Your signature provides consent to be attached to the form to submit"
+        android:textColor="@color/attend"
+        android:textSize="12sp" />
+
+
+    <com.admin.ecosense.helper.DrawingView
+        android:id="@+id/sigimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/editt_bottom"
+        android:minHeight="300dp" />
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/aggree"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_weight="0.5"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="@color/black"
+        android:text=" I agree to submit my data "
+        android:textSize="14sp"
+ />
+
+    <Button
+        android:id="@+id/btn_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_dialog"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@color/header"
+        android:ems="8"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="10dp"
+        android:text="OK"
+        android:textColor="#ffffffff" />
+
+</LinearLayout>

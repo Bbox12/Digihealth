@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/_l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/roboto_black"
+                android:gravity="center_vertical"
+                android:hint="Title"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:minHeight="56dp"
+                android:minLines="2"
+                android:padding="5dp"
+                android:textColor="@color/red"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white"
+                android:ems="12"
+                android:focusableInTouchMode="false"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center_vertical"
+                android:hint="Description"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:minHeight="56dp"
+                android:minLines="3"
+                android:padding="5dp"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <EditText
+            android:id="@+id/_ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/ic_right"
+            android:drawableLeft="@mipmap/ic_call"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="Answer"
+            android:inputType="textMultiLine|textNoSuggestions"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/straingbackground"
+        android:elevation="20dp"
+        android:fontFamily="@font/roboto_black"
+        android:text="SUBMIT"
+        android:textColor="@color/white"
+        android:theme="@style/Widget.AppCompat.Button.Borderless.Colored" />
+
+</LinearLayout>

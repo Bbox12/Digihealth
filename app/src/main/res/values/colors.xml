@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ED5837</color>
+    <color name="colorPrimaryDark">#ed5837</color>
+    <color name="colorAccent">#ed5837</color>
+
+
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#20d2bb</color>
+    <color name="bg_screen3">#3395ff</color>
+    <color name="bg_screen4">#c873f4</color>
+
+    <color name="black_overlay">#66000000</color>
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
+    <color name="dot_dark_screen1">#D1395C</color>
+    <color name="dot_dark_screen2">#26A69A</color>
+    <color name="dot_dark_screen3">#2278D4</color>
+    <color name="dot_dark_screen4">#a854d4</color>
+    <color name="indigo">#FFEA00</color>
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#D29480</color>
+    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="dot_light_screen3">#EF5350</color>
+    <color name="dot_light_screen4">#E57373</color>
+    <color name="deep_orange_600">#FF6D00</color>
+    <color name="placeholder_bg">#CCC8C8</color>
+    <color name="refer_main">#dd2c00</color>
+    <color name="highBlue">#1565C0</color>
+    <color name="topics_back">#ED5837
+    </color>
+    <color name="left">#0569B2</color>
+    <color name="right">#F9AC1E</color>
+    <color name="header">#008080</color>
+    <color name="attendence">#FF9575CD</color>
+    <color name="attendence1">#ab47bc</color>
+    <color name="notify">#FF7043</color>
+    <color name="homework1">#9E9D24</color>
+    <color name="attend">#006064</color>
+    <color name="gray">#F5F5F5</color>
+    <color name="red">#ed5837</color>
+    <color name="transparant">#50ffffff</color>
+    <color name="yellow">#ffeb3b</color>
+    <color name="white">#ffffff</color>
+    <color name="top">#ff6d00</color>
+    <color name="blue">#01579B</color>
+    <color name="light_blue">#B3E5FC</color>
+    <color name="green">#ed5837</color>
+    <color name="black">#000000</color>
+    <color name="from">#000000</color>
+    <color name="subject">#111111</color>
+    <color name="timestamp">#4285f4</color>
+    <color name="message">#7a7a7a</color>
+</resources>
